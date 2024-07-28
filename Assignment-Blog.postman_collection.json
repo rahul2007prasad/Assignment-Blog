@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "45bb087a-0119-479a-b1ed-bbf41f9777be",
+		"name": "Assignment-Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17563961"
+	},
+	"item": [
+		{
+			"name": "user_signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\" rahul kumar\",\r\n    \"email\":\"Ralpakna@gmail.com\",\r\n    \"mobileNum\":\"7978945678\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7076/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"rahul kalpana kumari\",\r\n    \"email\":\"Rkalpana@gmail.com\",\r\n    \"mobileNum\":\"8978975678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7076/users/2",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list_all_users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kalpana kumari\",\r\n    \"email\":\"kal@gmail.com\",\r\n    \"password\":\"123\",\r\n    \"about\":\"home\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7076/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_by_name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kalpana kumari\",\r\n    \"email\":\"kal@gmail.com\",\r\n    \"password\":\"123\",\r\n    \"about\":\"home\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7076/users/name?name=rahul kalpana kumari",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"users",
+						"name"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "rahul kalpana kumari"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kalpana\",\r\n    \"email\":\"kal@gmail.com\",\r\n    \"password\":\"123\",\r\n    \"about\":\"home\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7076/users/2",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "welcome",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kalpana\",\r\n    \"email\":\"kal@gmail.com\",\r\n    \"password\":\"123\",\r\n    \"about\":\"home\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7076/api/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"kp\",\r\n    \"password\":\"kp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create tag",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20iLCJpYXQiOjE3MjIwODAyOTQsImV4cCI6MTcyMjA4Mzg5NH0.FAjSNBvHwsmpPzWARVuwWqBD8qiVckqBuoFRQf9o_Nc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryTitle\":\"java\",\r\n    \"categoryDescription\":\"java programming\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7076/hashtag/",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"hashtag",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_discussion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"python\",\r\n    \"content\":\"python language\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7076/user/1/hashtag/1/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"user",
+						"1",
+						"hashtag",
+						"1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_comment",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete_discussion",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7076/posts/3",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"posts",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "discussion_by_tag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7076/hashtag/1/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "7076",
+					"path": [
+						"hashtag",
+						"1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "discussion_by_text",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
