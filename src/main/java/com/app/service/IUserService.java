@@ -1,0 +1,24 @@
+package com.app.service;
+
+import java.util.List;
+
+import com.app.payload.UserDto;
+
+public interface IUserService {
+	
+	UserDto registerNewUser(UserDto user);
+	
+	UserDto createUser(UserDto user);
+
+	UserDto updateUser(UserDto user, Integer userId);
+
+	UserDto getUserById(Integer userId);
+	
+	List<UserDto> getUserByName(String name);
+
+	List<UserDto> getAllUsers();
+
+	void deleteUser(Integer userId);
+	
+
+}
